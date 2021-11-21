@@ -18,6 +18,9 @@ export default function App() {
             <Route path="/Historico">
             <Historic />
             </Route>
+            <Route path="/GenerateCharts">
+            <GenerateCharts />
+            </Route>
         </Switch>
     </Router>
   );

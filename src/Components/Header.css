@@ -3,13 +3,13 @@
 #menu{
     width: 100%;
     height: 70px;
-    background: rgb(21, 145, 9);
+    background: rgb(95, 219, 84);
     padding: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 5px solid rgb(122, 122, 122);
+    border-bottom: 5px solid rgb(75, 209, 233);
     position: fixed;
     top: 0;
     overflow: hidden;
@@ -62,7 +62,7 @@ button:hover{
     width: 300px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 35px;
-    margin: 0 280px 0 30px;
+    margin: 0 400px 0 30px;
     text-shadow: 3px 3px 2px rgba(255, 255, 255, 0.664);
     color: white;
 }
@@ -85,7 +85,7 @@ button:hover{
 }
 
 .op:hover{
-    background: rgba(51, 127, 226, 0.3);
+    background: rgba(46, 255, 4, 0.3);
     cursor: pointer;
 }
 
