@@ -22,6 +22,16 @@ const Charts = () => {
 
   return (
       <>
+        
+      </>
+    );
+}
+
+export default Charts;
+
+/*
+
+<>
         <Plot
           data={[
             {type: tipo, x: x, y: y},
@@ -33,7 +43,28 @@ const Charts = () => {
         <input type="text" id="input1"/>
         <p id="result">resultado</p>
       </>
-    );
-}
 
-export default Charts;
+|||||||||||||||||||||||||||||||||||||||||||||||||\
+
+{
+   "nomeGrafico":"grafico1",
+   "valores":[
+      {
+         "nome":"x",
+         "valores":"1, 2, 3, 4"
+      },
+      {
+         "nome":"y",
+         "valores":"10, 11, 12, 13"
+      },
+      {
+         "nome":"size",
+         "valores":"40, 60, 80, 100"
+      },
+      {
+         "nome":"mode",
+         "valores":"markers"
+      }
+   ]
+}
+*/

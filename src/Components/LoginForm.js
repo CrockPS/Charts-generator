@@ -1,7 +1,7 @@
 import React from 'react';
 import './LoginForm.css';
 
-const LoginForm = () => {
+const LoginForm = () => { 
 
         return (
         <>
@@ -10,11 +10,11 @@ const LoginForm = () => {
                 <form>
                     <label>
                         <p>Digite seu email:</p>
-                        <input id="input-focus" type="text" placeholder="exemplo@email.com"/>
+                        <input id="input-focus" type="text" name="email" placeholder="exemplo@email.com" />
                     </label>
                     <label>
                         <p>Digite sua senha</p>
-                        <input id="input-focus" type="password" />
+                        <input id="input-focus" type="password"/>
                     </label>
                     <div>
                         <button id="submit-button" type="submit">Entrar</button>
