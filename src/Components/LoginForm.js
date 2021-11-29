@@ -10,29 +10,24 @@ const RegisterForm = () => {
     //password.current = watch("password", "");
     //const onSubmit = (data) => console.log({data});
 
-    const [teste, SetTeste] = useState([]);
+    const [teste, setTeste] = useState([]);
 
     const onSubmit = (data) => {
-        console.log(data);
+        //console.log(data);
         fetch('https://graphics-login-api.herokuapp.com/api/auth', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             
             body: JSON.stringify(data)
         })
-        .then((r)=>r.json)
+        .then((r)=>r.json())
         .then(
             (r)=>{
+                setTeste(r)
                 console.log(r)
-                //SetTeste(r)
             }
         )
-        
-
-        .then(function(res){ console.log(res) })
-        .catch(function(res){ console.log(res) })
-
-        console.log(teste);
+        .catch(function(r){ console.log(r) })
     }
 
         return (

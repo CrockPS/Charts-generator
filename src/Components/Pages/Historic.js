@@ -1,34 +1,36 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Header";
 
-const Historic = () => {
+export default function Historic(){
 
-    const [teste, setTeste] = useState([]);
+    const [graphics, setGraphics] = useState([]);
 
-    useEffect(()=> {
+    useEffect(() => {    
         fetch('https://graphics-api.herokuapp.com/api/graphics/1', {
-        method: 'GET',
-        headers: { 'Content-Type': 'application/json'},
-    })
-
-    .then((r)=>r.json)
-    .then(
-            console.log(r)
-        )
-
-    //.then(function(res){ console.log(res) })
-    //.catch(function(res){ console.log(res) })
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json'},
         })
 
-    function testeB(){
-    console.log("aqui" + teste);}
+        .then((r)=>r.json())
+            .then(
+                (r)=>{
+                    setGraphics(r)
+                }
+            )
+        .catch(error => console.error(error))
+
+        console.log(graphics)
+    });
 
     return(
         <>
             <Header />
-            <button onClick={testeB}>Teste</button>
+            <h2>Histórico de gráficos:</h2>
+            <div>
+                {Object.keys(graphics).map(
+                    graphics => <div key={graphics.graphics}>{graphics.graphicName}</div>
+                )}
+            </div>
         </>
     )
 }
-
-export default Historic;
