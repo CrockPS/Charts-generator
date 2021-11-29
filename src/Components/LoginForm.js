@@ -37,12 +37,12 @@ const RegisterForm = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label>
                         <p>Digite seu email:</p>
-                        <input id="input-focus" type="text" name="email" placeholder="nome@email.com"
+                        <input className="input-focus" type="text" name="email" placeholder="nome@email.com"
                         {...register('email', { required: true})}/>
                     </label>
                     <label>
                         <p>Digite sua senha</p>
-                        <input id="input-focus" type="password" name="password"
+                        <input className="input-focus" type="password" name="password"
                         {...register('password', { required: true})}/>
                     </label>
                     

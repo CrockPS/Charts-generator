@@ -30,14 +30,14 @@ const RegisterForm = () => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <label>
                         <p>Digite seu email:</p>
-                        <input id="input-focus" type="text" name="login" placeholder="nome@email.com"
+                        <input className="input-focus" type="text" name="login" placeholder="nome@email.com"
                         {...register('login', { required: "Email obrigatório!", pattern: 
                         {value: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/, message: "Digite um email válido!"} })}/>
                     </label>
                     {errors?.email && <ErrorMessage message={errors.email.message}/>}
                     <label>
                         <p>Digite sua senha</p>
-                        <input id="input-focus" type="password" name="password"
+                        <input className="input-focus" type="password" name="password"
                         {...register('password', { required: "A senha deve ter minimo seis caracteres!", minLength: 6 })}/>
                     </label>
                     {errors?.password && <ErrorMessage message={errors.password.message}/>}

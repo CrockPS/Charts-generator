@@ -5,8 +5,10 @@ export default function Historic(){
 
     const [graphics, setGraphics] = useState([]);
 
+    let fetchData = 'https://graphics-api.herokuapp.com/api/graphics/1';
+
     useEffect(() => {    
-        fetch('https://graphics-api.herokuapp.com/api/graphics/1', {
+        fetch(fetchData, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json'},
         })
@@ -14,22 +16,23 @@ export default function Historic(){
         .then((r)=>r.json())
             .then(
                 (r)=>{
-                    setGraphics(r)
+                    const teste = r;
+                    //console.log(teste.graphics[0]);
+                    //setGraphics(teste.graphics[1]);
+                    setGraphics(teste);
                 }
             )
         .catch(error => console.error(error))
 
-        console.log(graphics)
-    });
+    }, []);
+
+    console.log(graphics);
 
     return(
         <>
             <Header />
             <h2>Histórico de gráficos:</h2>
             <div>
-                {Object.keys(graphics).map(
-                    graphics => <div key={graphics.graphics}>{graphics.graphicName}</div>
-                )}
             </div>
         </>
     )

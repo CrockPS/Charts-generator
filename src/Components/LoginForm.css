@@ -13,7 +13,7 @@
     border: 3px solid rgb(95, 219, 84);
 }
 
-#input-focus:focus {
+.input-focus:focus {
     outline: none;
     border:1px solid rgb(95, 219, 84);
 }
