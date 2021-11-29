@@ -1,0 +1,44 @@
+.charts-form{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px 35%;
+    width: 400px;
+    font-size: 17px;
+}
+
+h2{
+    margin: 20px 0 20px 30%;
+}
+
+#submit-button{
+    margin-top: 30px;
+    width: 100%;
+}
+
+#submit-button:hover{
+    border: 3px solid rgb(95, 219, 84);
+}
+
+.select{
+    height: 35px;
+}
+
+.input-focus{
+    border: none;
+    width: 100%;
+    font-size: 16px
+}
+
+.input-focus:focus {
+    outline: none;
+    border:1px solid rgb(95, 219, 84);
+}
+
+#charts{
+    display: flex;
+    justify-content: center;
+}
+
+#download{
+    margin-top: 40px;
+}

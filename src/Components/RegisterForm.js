@@ -12,13 +12,15 @@ const RegisterForm = () => {
     //const onSubmit = (data) => console.log({data});
 
     const onSubmit = (data) => {
+        console.log(data);
         fetch('https://graphics-login-api.herokuapp.com/api/users', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 'Content-Type': 'application/json'},
+            
             body: JSON.stringify(data)
         })
-        .then(response => {console.log(response);})
-        .then(data => this.setState({ postId: data.id }));
+        .then(function(res){ console.log(res) })
+        .catch(function(res){ console.log(res) })
     }
 
         return (
@@ -64,8 +66,46 @@ export default RegisterForm;
  /*const onSubmit = (data) => {
         fetch('https://graphics-login-api.herokuapp.com/api/users', {
             method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
         })
         .then(response => response.json())
         .then(data => this.setState({ postId: data.id }));
-    } */
+
+    const onSubmit = (data) => {
+        fetch('https://graphics-login-api.herokuapp.com/api/users', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(response => {console.log(response);})
+        .then(data => this.setState({ postId: data.id }));
+    }
+    } 
+    
+    const onSubmit = (data) => {
+        console.log(data);
+        fetch('https://graphics-login-api.herokuapp.com/api/users', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        })
+        .then(function(res){ console.log(res) })
+        .catch(function(res){ console.log(res) })
+    }
+
+    const onSubmit = (data) => {
+        fetch('https://graphics-login-api.herokuapp.com/api/users', {
+            method: 'users',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+        .then(function(res){ return res.json(); })
+        //.then(data => this.setState({ postId: data.id }));
+        .then(function(data){
+            alert(JSON.stringify(data));
+            console.warn(data);
+        })
+        .catch(err => console.log(err));
+    }
+    */
