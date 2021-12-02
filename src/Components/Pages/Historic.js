@@ -34,20 +34,20 @@ export default function Historic(){
     let [name, setName] = useState("");
     let [x, setX] = useState([]);
     let [y, setY] = useState([]);
-    let [type, setType] = useState();
+    let [type, setType] = useState("");
 
     function geraGrafico(graphic){
-        console.log(graphic.values[2].values);
+        console.log(graphic);
         setName(graphic.graphicName);
-        setX(graphic.values[0].values);
-        setY(graphic.values[1].values);
+        setX(graphic.values[0].values.split(", "));
+        setY(graphic.values[1].values.split(", "));
         setType(graphic.values[2].values);
     }
 
     let userInput = [
         {
-            "x": [...x],
-            "y": [...y],
+            "x": x,
+            "y": y,
             "type": type
         }];
 
