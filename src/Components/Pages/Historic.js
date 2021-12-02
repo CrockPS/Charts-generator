@@ -8,6 +8,7 @@ export default function Historic(){
 
     useEffect(() => {   
         buscaDadosHistorico();
+        //document.querySelector("#teste").innerHTML = graphics[0].values[1].values;
     });
 
     async function buscaDadosHistorico(){
@@ -21,10 +22,19 @@ export default function Historic(){
         setGraphics(data.graphics);
         //console.log(data);
 
-        data.graphics.forEach(element => {
+        /*data.graphics.forEach(element => {
             console.log(element);
-        });
+        });*/
 
+    }
+
+    let [name, setName] = useState("");
+    let [x, setX] = useState();
+    let [y, setY] = useState();
+    let [type, setType] = useState();
+
+    function GeraGrafico(graphic){
+        console.log(graphic);
     }
 
     let userInput = [
@@ -34,21 +44,22 @@ export default function Historic(){
             "type": 'bar'
         }];
 
-    const name = 'teste'
-
     //console.log(graphics.graphics[0])
-
-    document.querySelector("#teste").innerHTML = graphics.graphics;
 
     return(
         <>
             <Header />
             <h2>Histórico de gráficos:</h2>
-            <div id="teste">
-            </div>
-            <div id="charts">
-                
-            </div>
+            <ul>
+                {graphics.map(graphic => (
+                <li key={graphic.graphicName}>
+                    <label>{graphic.graphicName}</label>
+                    <button type="button" onClick={GeraGrafico(graphic.graphicName)}>
+                        Gerar gráfico
+                    </button>
+                </li>
+                ))}
+            </ul>
         </>
     )
 }
