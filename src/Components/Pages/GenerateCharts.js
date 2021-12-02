@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../Header";
 import Charts from "../Charts";
 import { useForm } from "react-hook-form";
@@ -9,7 +9,7 @@ const GenerateCharts = () => {
 
   //let [gerar, setGerar] = useState(0);
 
-  const { handleSubmit, register, errors} = useForm();
+  const { handleSubmit, register } = useForm();
 
   const onSubmit = (data) => {
     console.log(data);
