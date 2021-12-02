@@ -18,10 +18,10 @@ const Welcome = () => {
                 <p id="welcome-p">Você insere os dados e nós convertemos em gráficos, simples assim! Escolha qual o melhor tipo de gráfico para se adequar as suas necessidades com base nos dados que forem fornecidos, rápido e fácil assim mesmo. Veja abaixo alguns exemplos de gráficos que podem ser gerados aqui ou então clique no botão abaixo para ir direto gerar seus gráficos:</p>
                 <Link to="/GenerateCharts" id="link"> <h3>Gerar gráficos</h3> </Link>
                 <div id="slide"><AliceCarousel autoPlay autoPlayInterval="1000" infinite>
-                    <img src={ex1} className="sliderimg"/>
-                    <img src={ex2} className="sliderimg"/>
-                    <img src={ex3} className="sliderimg"/>
-                    <img src={ex4} className="sliderimg"/>
+                    <img src={ex1} alt="" className="sliderimg"/>
+                    <img src={ex2} alt="" className="sliderimg"/>
+                    <img src={ex3} alt="" className="sliderimg"/>
+                    <img src={ex4} alt="" className="sliderimg"/>
                 </AliceCarousel></div>
             </div>
         </>

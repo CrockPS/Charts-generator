@@ -1,12 +1,11 @@
-import { ErrorMessage } from "@hookform/error-message";
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { history } from "./History";
 import './LoginForm.css';
 
 const RegisterForm = () => {
 
-    const { handleSubmit, register, errors, watch } = useForm(); 
+    const { handleSubmit, register } = useForm(); 
     //const password = useRef({});
     //password.current = watch("password", "");
     //const onSubmit = (data) => console.log({data});
@@ -29,7 +28,6 @@ const RegisterForm = () => {
                 localStorage.setItem('jwt', r.jwt)
                 localStorage.setItem('userId', r.userId)
                 history.push('/GenerateCharts')
-                const idValue = localStorage.getItem('userId')
             }
         )
         .catch(function(r){ console.log(r) })

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Header";
 import Charts from "../Charts";
-import { ErrorMessage } from "@hookform/error-message";
 import { useForm } from "react-hook-form";
 import '../GenerateCharts.css';
 import { MdCameraAlt } from 'react-icons/md';
@@ -41,12 +40,14 @@ const GenerateCharts = () => {
     setY(y = valueY);
     setType(type = valueType);
 
+    const idValue = localStorage.getItem('userId')
+
     fetch('https://graphics-api.herokuapp.com/api/graphics', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json'},
         body: JSON.stringify({
           "nomeGrafico": name,
-          "userId": 1,
+          "userId": idValue,
           "values": [
             {
             "name": "x",

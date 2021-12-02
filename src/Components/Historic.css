@@ -1,0 +1,41 @@
+#historic{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+ul{
+    margin: 0 0 50px 0;
+}
+
+li{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 20px 0;
+}
+
+#gerar{
+    width: 100%;
+    margin: 10px 0 0 0;
+}
+
+#gerar:hover{
+    border: 3px solid rgb(95, 219, 84);
+}
+
+#new-charts{
+    text-decoration: none;
+    background: rgba(95, 219, 84, 0.699);
+    color: black;
+    width: 200px;
+    margin: 20px 0 15px 20%;
+    border-radius: 30px;
+    font-size: 17px;
+}
+
+#new-charts:hover{
+    background: rgb(95, 219, 84);
+    color: white;
+}

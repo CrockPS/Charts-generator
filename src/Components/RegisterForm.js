@@ -1,12 +1,11 @@
 import { ErrorMessage } from "@hookform/error-message";
-import React, { useRef } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
-import Api from "./Api.js"
 import './LoginForm.css';
 //console.log({data});
 const RegisterForm = () => {
 
-    const { handleSubmit, register, errors, watch } = useForm(); 
+    const { handleSubmit, register, errors } = useForm(); 
     //const password = useRef({});
     //password.current = watch("password", "");
     //const onSubmit = (data) => console.log({data});

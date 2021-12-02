@@ -17,6 +17,9 @@ export default function Routes() {
               <Route exact path="/Login">
               <Login />
               </Route>
+              <Route exact path="/Logout">
+              <Login />
+              </Route>
               <PrivateRoute exact path="/Historico">
               <Historic />
               </PrivateRoute>
