@@ -1,6 +1,7 @@
 import { ErrorMessage } from "@hookform/error-message";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
+import { history } from "./History";
 import './LoginForm.css';
 
 const RegisterForm = () => {
@@ -10,7 +11,7 @@ const RegisterForm = () => {
     //password.current = watch("password", "");
     //const onSubmit = (data) => console.log({data});
 
-    const [teste, setTeste] = useState([]);
+    //const [teste, setTeste] = useState([]);
 
     const onSubmit = (data) => {
         //console.log(data);
@@ -23,8 +24,15 @@ const RegisterForm = () => {
         .then((r)=>r.json())
         .then(
             (r)=>{
-                setTeste(r)
-                console.log(r)
+                //setTeste(r)
+                //console.log(r)
+                localStorage.setItem('jwt', r.jwt)
+                localStorage.setItem('userId', r.userId)
+                history.push('/GenerateCharts')
+                const jwtValue = localStorage.getItem('jwt')
+                const idValue = localStorage.getItem('userId')
+                console.log(jwtValue)
+                console.log(idValue)
             }
         )
         .catch(function(r){ console.log(r) })
@@ -47,7 +55,7 @@ const RegisterForm = () => {
                     </label>
                     
                     <div>
-                        <button id="submit-button" type="submit">Entrar</button>
+                        <button id="submit-button-login" type="submit">Entrar</button>
                     </div>
                 </form>
             </div>    

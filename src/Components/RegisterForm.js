@@ -43,7 +43,7 @@ const RegisterForm = () => {
                     {errors?.password && <ErrorMessage message={errors.password.message}/>}
                     
                     <div>
-                        <button id="submit-button" type="submit">Criar conta</button>
+                        <button id="submit-button-register" type="submit">Criar conta</button>
                     </div>
                 </form>
             </div>    

@@ -100,12 +100,12 @@ const GenerateCharts = () => {
                   </select>
               </label>
               <label>
-                  <p>Digite os nomes/valores da coluna(parte inferior do gráfico) separando cada valor por vírgula:</p>
+                  <p>Digite os nomes/valores da coluna(parte inferior do gráfico) separando cada valor por vírgula e espaço:</p>
                   <input className="input-focus" id="x" type="text" name="x"
                   {...register('x', { required: true})}/>
               </label>
               <label>
-                  <p>Digite os nomes/valores correspondentes aos dados inseridos anteriormente(parte lateral do gráfico) <br/> separando cada valor por vírgula:</p>
+                  <p>Digite os nomes/valores correspondentes aos dados inseridos anteriormente(parte lateral do gráfico) <br/> separando cada valor por vírgula e espaço:</p>
                   <input className="input-focus" id="y" type="text" name="y"
                   {...register('y', { required: true})}/>
               </label>

@@ -4,12 +4,21 @@
     align-items: center;
 }
 
-#submit-button{
+#submit-button-register{
     margin-top: 30px;
     width: 100%;
 }
 
-#submit-button:hover{
+#submit-button-login{
+    margin-top: 30px;
+    width: 100%;
+}
+
+#submit-button-register:hover{
+    border: 3px solid rgb(95, 219, 84);
+}
+
+#submit-button-login:hover{
     border: 3px solid rgb(95, 219, 84);
 }
 
