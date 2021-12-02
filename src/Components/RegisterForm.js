@@ -18,10 +18,15 @@ const RegisterForm = () => {
             
             body: JSON.stringify(data)
         })
-        .then(function(res){ console.log(res) })
+        
+        .then((r) =>{
+            if (r.status !== 200) {
+                alert("Email já cadastrado!");
+            }else{
+                alert("Usuário cadastrado com sucesso, por favor faça login!");
+            }
+        })
         .catch(function(res){ console.log(res) })
-
-        alert("Usuário cadastrado com sucesso, por favor faça login!");
     }
 
         return (

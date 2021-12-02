@@ -27,12 +27,15 @@ const RegisterForm = () => {
                 //console.log(r)
                 localStorage.setItem('jwt', r.jwt)
                 localStorage.setItem('userId', r.userId)
-                history.push('/GenerateCharts')
+                if (r.status !== 200) {
+                    alert("Usuário inválido!");
+                }else{
+                    history.push('/GenerateCharts')
+                    alert("Bem vindo!");
+                }
             }
         )
         .catch(function(r){ console.log(r) })
-        
-        alert("Bem vindo!");
     }
 
         return (
