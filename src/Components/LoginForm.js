@@ -27,11 +27,12 @@ const RegisterForm = () => {
                 //console.log(r)
                 localStorage.setItem('jwt', r.jwt)
                 localStorage.setItem('userId', r.userId)
-                if (r.status !== 200) {
+                if (r.status === 400 || r.status === 403 || r.status === 404){
                     alert("Usuário inválido!");
                 }else{
                     history.push('/GenerateCharts')
                     alert("Bem vindo!");
+                    //console.log(r);
                 }
             }
         )

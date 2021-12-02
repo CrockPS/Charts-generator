@@ -20,7 +20,7 @@ const RegisterForm = () => {
         })
         
         .then((r) =>{
-            if (r.status !== 200) {
+            if (r.status === 400 || r.status === 403 || r.status === 404) {
                 alert("Email já cadastrado!");
             }else{
                 alert("Usuário cadastrado com sucesso, por favor faça login!");
