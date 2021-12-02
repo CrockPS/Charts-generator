@@ -21,6 +21,8 @@ const RegisterForm = () => {
         })
         .then(function(res){ console.log(res) })
         .catch(function(res){ console.log(res) })
+
+        alert("Usuário cadastrado com sucesso, por favor faça login!");
     }
 
         return (

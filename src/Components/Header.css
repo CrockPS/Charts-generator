@@ -92,3 +92,7 @@ button:hover{
 #space{
     height: 70px;
 }
+
+.login{
+    display: none;
+}

@@ -29,13 +29,12 @@ const RegisterForm = () => {
                 localStorage.setItem('jwt', r.jwt)
                 localStorage.setItem('userId', r.userId)
                 history.push('/GenerateCharts')
-                const jwtValue = localStorage.getItem('jwt')
                 const idValue = localStorage.getItem('userId')
-                console.log(jwtValue)
-                console.log(idValue)
             }
         )
         .catch(function(r){ console.log(r) })
+        
+        alert("Bem vindo!");
     }
 
         return (

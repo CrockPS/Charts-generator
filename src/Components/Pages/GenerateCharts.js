@@ -14,6 +14,7 @@ const GenerateCharts = () => {
 
   const onSubmit = (data) => {
     console.log(data);
+    alert("Gráfico gerado com sucesso!");
   } 
 
   let [name, setName] = useState("");
